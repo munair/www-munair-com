@@ -1,0 +1,12 @@
+/* TEAM */
+                        
+    Munair Simpson
+    Email: munair [at] gmail.com
+    Twitter: @munair
+    Location: Seoul, South Korea
+                            
+/* SITE */     
+
+    Doctype: HTML5
+    Components: jQuery, Vegas
+    Design: Jay Salvat
