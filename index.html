@@ -21,16 +21,16 @@
   <div class="homepage-header">
     <div class="homepage-info">
       <h1> <span class="line1">Links </span> <span class="line2">4 </span> <span class="line3">Munair Simpson </span> <span class="line4">Entrepreneur & Engineer </span> </h1>
-      <p> <small class="line4">Website development by <a href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </small> </p>
+      <p> <small class="line4">Website development by <a id="qeng" href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </small> </p>
       <nav class="homepage-menu">
-        <ul>
-	  <li class="pushable"> <span id="cstu" class="line2"><a href="http://www.capoeirastudio.com">Capoeira Studio</a> </span> </li>
-	  <li class="pushable"> <span id="qeng" class="line2"><a href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </span> </li>
-	  <li class="pushable"> <span id="lkin" class="line2"><a href="https://kr.linkedin.com/in/munair">LinkedIn Profile</a> </span> </li>
-	  <li class="pushable"> <span id="fbpr" class="line2"><a href="http://www.facebook.com/munair">Facebook Profile</a> </span> </li>
+        <ul id="links4">
+	  <li class="pushable"> <span class="line2"><a href="http://www.capoeirastudio.com">Capoeira Studio</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="https://kr.linkedin.com/in/munair">LinkedIn Profile</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="http://www.facebook.com/munair">Facebook Profile</a> </span> </li>
         </ul>
       </nav>
-      <p> <small class="line4">Need business development or marketing strategy <a href="mailto:munair@gmail.com">support</a>? <a href="tel:010-9090-9183">Hire Munair!</a> </small> </p>
+      <p> <small class="line4">Need business development or marketing strategy <a id="email" href="mailto:munair@gmail.com">support</a>? <a id="call" href="tel:010-9090-9183">Hire Munair!</a> </small> </p>
       <p> <small class="line4">Feeling generous? Make a <a id="do-donate" href="http://paypal.com">donation</a> to our Capoeira Studio.</small> </p>
     </div><!-- End Homepage-Info Div -->
   </div><!-- End Homepage-Header Div -->
@@ -56,17 +56,18 @@
     $(document).ready(function(){
         ion.sound({
             sounds: [
-                {name: "button_click"},
+                {name: "bell_ring"},
                 {name: "button_tiny"}
             ],
             path: "/sounds/",
             preload: true,
-            volume: 0.7
+            volume: 0.3
         });
-        $("#cstu").hover(function(){ ion.sound.play("button_tiny"); });
-        $("#qeng").hover(function(){ ion.sound.play("button_tiny"); });
-        $("#lkin").hover(function(){ ion.sound.play("button_tiny"); });
-        $("#fbpr").hover(function(){ ion.sound.play("button_tiny"); });
+	$("#qeng").on("mouseover", function(){ ion.sound.play("bell_ring"); });
+	$("#call").on("mouseover", function(){ ion.sound.play("button_tiny"); });
+	$("#email").on("mouseover", function(){ ion.sound.play("button_tiny"); });
+	$("#links4").on("mouseover", function(){ ion.sound.play("button_tiny"); });
+	$("#do-donate").on("mouseover", function(){ ion.sound.play("button_tiny"); });
     });
 </script>
 
