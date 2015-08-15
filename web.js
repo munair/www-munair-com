@@ -10,6 +10,7 @@ app.use("/video", express.static(__dirname + '/video'));
 app.use("/sounds", express.static(__dirname + '/sounds'));
 
 app.get('/', function(request, response) { var htmlBuffer = fs.readFileSync('index.html', 'utf-8'); response.send(htmlBuffer); });
+app.get('/favicon.ico', function(request, response) { var htmlBuffer = fs.readFileSync('favicon.ico', 'utf-8'); response.send(htmlBuffer); });
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
