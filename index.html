@@ -10,6 +10,7 @@
 <meta property="og:url" content="http://www.munair.com">
 <meta property="og:image" content="http://www.munair.com/img/zumba-grin.jpg">
 <link rel="author" href="http://www.munair.com/humans.txt" type="text/plain">
+<link rel="favicon" href="http://www.munair.com/favicon.ico" type="png">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,900">
 <link rel="stylesheet" href="http://jaysalvat.github.io/vegas/releases/latest/vegas.min.css">
 <link rel="stylesheet" href="/css/vegas.min.css">
@@ -24,10 +25,10 @@
       <p> <small class="line4">Website development by <a href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </small> </p>
       <nav class="homepage-menu">
         <ul>
-	  <li class="pushable"> <span id="cstu" class="line2"><a href="http://www.capoeirastudio.com">Capoeira Studio</a> </span> </li>
-	  <li class="pushable"> <span id="qeng" class="line2"><a href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </span> </li>
-	  <li class="pushable"> <span id="lkin" class="line2"><a href="https://kr.linkedin.com/in/munair">LinkedIn Profile</a> </span> </li>
-	  <li class="pushable"> <span id="fbpr" class="line2"><a href="http://www.facebook.com/munair">Facebook Profile</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="http://www.capoeirastudio.com">Capoeira Studio</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="http://www.quilombolaengineering.com">Quilombola Engineering</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="https://kr.linkedin.com/in/munair">LinkedIn Profile</a> </span> </li>
+	  <li class="pushable"> <span class="line2"><a href="http://www.facebook.com/munair">Facebook Profile</a> </span> </li>
         </ul>
       </nav>
       <p> <small class="line4">Need business development or marketing strategy <a href="mailto:munair@gmail.com">support</a>? <a href="tel:010-9090-9183">Hire Munair!</a> </small> </p>
@@ -54,19 +55,8 @@
 <script src="/js/ion.sound.js"> </script>
 <script>
     $(document).ready(function(){
-        ion.sound({
-            sounds: [
-                {name: "button_click"},
-                {name: "button_tiny"}
-            ],
-            path: "/sounds/",
-            preload: true,
-            volume: 0.7
-        });
-        $("#cstu").hover(function(){ ion.sound.play("button_tiny"); });
-        $("#qeng").hover(function(){ ion.sound.play("button_tiny"); });
-        $("#lkin").hover(function(){ ion.sound.play("button_tiny"); });
-        $("#fbpr").hover(function(){ ion.sound.play("button_tiny"); });
+        ion.sound({ sounds: [ {name: "button_tiny"} ], path: "/sounds/", preload: true, volume: 0.7 });
+        $("a").on("mouseover", function(){ ion.sound.play("button_tiny"); });
     });
 </script>
 
